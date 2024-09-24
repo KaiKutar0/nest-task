@@ -18,7 +18,6 @@ import { AuthGuard } from 'src/auth/auth.guard';
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}
-  @UseGuards(AuthGuard)
   @Post()
   async createUser(
     @Body('name') name: string,
@@ -29,12 +28,10 @@ export class UserController {
   ) {
     return this.userService.createUser(name, email, password, number, age);
   }
-  @UseGuards(AuthGuard)
   @Get()
   async findAll(/*@Query() query: any*/): Promise<User[]> {
     return this.userService.findAll();
   }
-  @UseGuards(AuthGuard)
   @Get(':id')
   findOne(@Param('id') id: string): Promise<User> {
     return this.userService.findOne(id);
