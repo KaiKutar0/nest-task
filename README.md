@@ -24,10 +24,13 @@
 
 ## Description
 
+## Usage
+
 Please use API tools like postman etc.
-route for authorization: http://localhost:3000/auth/login
-route to GET POST user: http://localhost:3000/user
-route to POST user by id: http://localhost:3000/user/:id
+
+- route for authorization: http://localhost:3000/auth/login
+- route to GET POST user: http://localhost:3000/user
+- route to POST user by id: http://localhost:3000/user/:id
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
